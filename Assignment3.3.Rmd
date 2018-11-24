@@ -1,0 +1,47 @@
+---
+title: "Assignment3.2"
+author: "Aruna"
+date: "24 November 2018"
+output: word_document
+---
+```{r}
+# Assignment 3.3
+
+## 1. Define matrix mymat by replicating the sequence 1:5 for 4 times 
+# and transforming into a matrix, sum over rows and columns.
+
+
+mymat <- matrix(rep(1:5,4), nrow = 4, ncol = 4)
+colnames(mymat) <- c("col1", "col2", "col3","col4")
+rownames(mymat) <- c("row1", "row2","row3","row4")
+mymat
+
+# Add all Rows and Columns
+
+rowSums(mymat)
+colSums(mymat)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
